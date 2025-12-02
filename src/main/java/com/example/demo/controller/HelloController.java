@@ -37,10 +37,11 @@ public class HelloController {
   }
 
   /**
-   * 이름을 받아서 인사하는 API
-   * GET /api/hello/{name}
+   * 이름과 나이를 받아서 인사하는 API
+   * GET /api/hello/{name}/{age}
    * 
    * @param name 경로 변수로 받은 이름
+   * @param age 경로 변수로 받은 나이
    * @return 개인화된 인사 메시지
    */
   @GetMapping("/hello/{name}/{age}")
