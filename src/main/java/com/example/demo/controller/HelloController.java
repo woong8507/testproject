@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +24,8 @@ import java.util.Map;
 @RequestMapping("/api")
 public class HelloController {
 
+  private static final Logger log = LoggerFactory.getLogger(HelloController.class);
+
   /**
    * 기본 인사말 API
    * GET /api/hello
@@ -42,13 +46,14 @@ public class HelloController {
    * 
    * @param name 경로 변수로 받은 이름
    * @param age 경로 변수로 받은 나이
-   * @return 개인화된 인사 메시지
+   * @return 개인화된 인사 메시지  이거 어떻게 하는거여  시벌 ㅋㅋㅋㅋ
    */
   @GetMapping("/hello/{name}/{age}")
   public Map<String, String> helloWithName(@PathVariable String name, @PathVariable int age ) {
     Map<String, String> response = new HashMap<>();
     response.put("message", "안녕하세요, " + name + "님! 당신의 나이는"+age+"세입니다.ㅋㅋㅋㅋㅋ 존나 어렵네 ");
     response.put("status", "success");
+    log.info("이름: {}, 나이: {}", name, age);
     return response;
   }
 
