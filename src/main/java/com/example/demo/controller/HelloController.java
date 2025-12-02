@@ -47,7 +47,7 @@ public class HelloController {
   @GetMapping("/hello/{name}/{age}")
   public Map<String, String> helloWithName(@PathVariable String name, @PathVariable int age ) {
     Map<String, String> response = new HashMap<>();
-    response.put("message", "안녕하세요, " + name + "님! 당신의 나이는"+age+"세입니다.ㅋㅋㅋㅋㅋ");
+    response.put("message", "안녕하세요, " + name + "님! 당신의 나이는"+age+"세입니다.ㅋㅋㅋㅋㅋ 존나 어렵네 ");
     response.put("status", "success");
     return response;
   }
