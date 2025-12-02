@@ -35,7 +35,7 @@ public class HelloController {
   @GetMapping("/hello")
   public Map<String, String> hello() {
     Map<String, String> response = new HashMap<>();
-    response.put("message", "안녕하세요! 스프링 부트에 오신 것을 환영합니다! 정말로??");
+    response.put("message", "안녕하세요! 스프링 부트에 오신 것을 환영합니다!");
     response.put("status", "success");
     return response;
   }
